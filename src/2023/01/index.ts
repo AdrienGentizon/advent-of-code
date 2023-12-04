@@ -1,3 +1,5 @@
+import logResults from '../../utils/logResult'
+
 export const inputs = `four9one
 bbzhsmnmtf8kftwosevenxfkssgrcjthree
 6pkkcddsixsixjgnjvdtjtwo
@@ -1026,7 +1028,10 @@ export function compute() {
     const lastNumber = parseStringAsNumber(matches[matches.length - 1][0])
     numbers.push(parseInt(`${firstNumber}${lastNumber}`))
   }
-  return { partTwo: numbers.reduce((acc: number, curr) => acc + curr, 0) }
+  return {
+    title: '01/12',
+    partTwo: numbers.reduce((acc: number, curr) => acc + curr, 0),
+  }
 }
 
-console.log(compute())
+logResults(compute())
