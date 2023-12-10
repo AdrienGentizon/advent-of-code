@@ -1,4 +1,5 @@
 import logResults from '../../utils/logResult'
+import { patternOnlyNumbers, patternNewLine } from '../../utils/regex'
 
 export const inputs = `.......................153..988....502..842.........588.....441.468......481..........314...715.57............................163..992..512.
 ............805............*......#.............%...............*........=......%......................#......*.............-....#....*.....
@@ -180,8 +181,6 @@ function mapCellFromRegexMatch(n: number) {
   }
 }
 
-export const patternNewLine = /\r?\n/
-export const patternOnlyNumbers = /[0-9]+/g
 export const patternSpecialCharacters = /[\*#%=\-\/+$@&]+/g
 
 function getNumbers(inputs: string[]): Row[] {
